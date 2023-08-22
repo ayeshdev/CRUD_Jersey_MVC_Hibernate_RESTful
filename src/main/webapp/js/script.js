@@ -22,20 +22,9 @@ document.getElementById("btn").addEventListener("click", () => {
     });
 })
 
-function editEmployee(empId) {
-    // fetch('delete-employee', {
-    //     method: 'delete',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //         id: empId,
-    //     })
-    // }).then(response => response.text()).then(res => {
-    //     console.log(res)
-    // });
+function goToEditEmployee(empId){
+    window.location = "/crudapp/employee-controller/edit-employee/?id="+empId;
 }
-
 
 function deleteEmployee(empId) {
     fetch('employee-controller', {
@@ -87,3 +76,5 @@ function registerEmployee(){
 
     });
 }
+
+

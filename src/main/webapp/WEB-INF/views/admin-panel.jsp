@@ -55,7 +55,7 @@
             <td>${employee.department.name}</td>
             <td>${employee.employeePosition.name}</td>
             <td><button onclick="deleteEmployee(${employee.id})">Delete</button></td>
-            <td><button onclick="editEmployee(${employee.id})">Edit</button></td>
+            <td><button onclick="goToEditEmployee(${employee.id})">Edit</button></td>
         </tr>
 
     </c:forEach>
