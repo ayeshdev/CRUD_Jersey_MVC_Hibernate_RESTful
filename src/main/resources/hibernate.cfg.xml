@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/web2_assignment_4?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Ayesh@14775</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <mapping class="com.ayesh.webapp.entity.Department"/>
+        <mapping class="com.ayesh.webapp.entity.Employee"/>
+        <mapping class="com.ayesh.webapp.entity.EmployeePosition"/>
+        <mapping class="com.ayesh.webapp.entity.User"/>
+        <mapping class="com.ayesh.webapp.entity.UserType"/>
+    </session-factory>
+</hibernate-configuration>
