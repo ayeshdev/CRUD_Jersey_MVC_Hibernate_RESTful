@@ -16,7 +16,6 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.Date;
-import java.util.List;
 
 
 @Path("/employee-controller")
@@ -38,6 +37,8 @@ public class EmployeeController {
     }
 
 
+
+
     @DELETE
     public Response deleteEmployee(EmployeeDTO employeeDTO) {
 
@@ -49,7 +50,7 @@ public class EmployeeController {
 
         transaction.commit();
 
-        return Response.ok().entity("Employee Deleted Successful!").build();
+        return Response.ok().entity("EmployeeService Deleted Successful!").build();
     }
 
     @POST
@@ -61,9 +62,9 @@ public class EmployeeController {
         String employee_position = employeeDTO.getPosition();
 
         if(name.isEmpty()){
-            return Response.status(Response.Status.BAD_REQUEST).entity("Enter Employee Name").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Enter EmployeeService Name").build();
         }else if(salary==null){
-            return Response.status(Response.Status.BAD_REQUEST).entity("Enter Employee Salary").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Enter EmployeeService Salary").build();
         }else{
 
             Employee employee = new Employee();
@@ -81,7 +82,7 @@ public class EmployeeController {
             transaction.commit();
             session.close();
 
-            return Response.ok().entity("Employee Registered Successful!").build();
+            return Response.ok().entity("EmployeeService Registered Successful!").build();
         }
 
 
@@ -100,12 +101,12 @@ public class EmployeeController {
 
 
         if(name.isEmpty()){
-            return Response.status(Response.Status.BAD_REQUEST).entity("Enter Employee Name").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Enter EmployeeService Name").build();
         }else if(salary==null){
-            return Response.status(Response.Status.BAD_REQUEST).entity("Enter Employee Salary").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("Enter EmployeeService Salary").build();
         }else{
 
-//            Employee employee = session.createQuery("select e from Employee e where e.id=:emp_id", Employee.class).setParameter("emp_id",id).getSingleResult();
+//            EmployeeService employee = session.createQuery("select e from EmployeeService e where e.id=:emp_id", EmployeeService.class).setParameter("emp_id",id).getSingleResult();
 
 //            List<Department> departments = session.createQuery("select depart from Department depart", Department.class).getResultList();
 
@@ -129,7 +130,7 @@ public class EmployeeController {
             transaction.commit();
             session.close();
 
-            return Response.ok().entity("Employee Registered Successful!").build();
+            return Response.ok().entity("EmployeeService Registered Successful!").build();
         }
 
     }

@@ -25,7 +25,7 @@
     </tr>
     <tr>
         <td></td>
-        <td><button id="btn">Login</button></td>
+        <td><button onclick="login()">Login</button></td>
     </tr>
 </table>
 <script src="./js/script.js"></script>

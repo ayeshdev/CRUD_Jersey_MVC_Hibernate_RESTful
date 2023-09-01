@@ -48,7 +48,7 @@ public final class edit_002demployee_jsp extends org.apache.jasper.runtime.HttpJ
     _jspx_imports_classes = new java.util.HashSet<>();
     _jspx_imports_classes.add("jakarta.persistence.Query");
     _jspx_imports_classes.add("java.util.List");
-    _jspx_imports_classes.add("com.ayesh.webapp.entity.Employee");
+    _jspx_imports_classes.add("com.ayesh.webapp.entity.EmployeeService");
     _jspx_imports_classes.add("com.ayesh.webapp.entity.Department");
     _jspx_imports_classes.add("com.ayesh.webapp.util.HibernateUtil");
     _jspx_imports_classes.add("org.hibernate.SessionFactory");
@@ -157,10 +157,10 @@ public final class edit_002demployee_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("    <title>Edit Employee</title>\r\n");
+      out.write("    <title>Edit EmployeeService</title>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("<h1>Edit Employee</h1>\r\n");
+      out.write("<h1>Edit EmployeeService</h1>\r\n");
       out.write("<br>\r\n");
       out.write("\r\n");
 
@@ -171,7 +171,7 @@ public final class edit_002demployee_jsp extends org.apache.jasper.runtime.HttpJ
 
     String id = request.getParameter("id");
 
-    Employee employee = sessionData.createQuery("select e from Employee e where e.id=:emp_id", Employee.class).setParameter("emp_id",id).getSingleResult();
+    Employee employee = sessionData.createQuery("select e from EmployeeService e where e.id=:emp_id", Employee.class).setParameter("emp_id",id).getSingleResult();
     pageContext.setAttribute("employees", employee);
 
     List<Department> departments = sessionData.createQuery("select depart from Department depart", Department.class).getResultList();

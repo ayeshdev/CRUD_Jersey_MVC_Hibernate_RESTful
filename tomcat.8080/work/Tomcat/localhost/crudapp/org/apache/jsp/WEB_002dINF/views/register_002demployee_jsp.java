@@ -46,7 +46,7 @@ public final class register_002demployee_jsp extends org.apache.jasper.runtime.H
     _jspx_imports_packages.add("jakarta.servlet.jsp");
     _jspx_imports_classes = new java.util.HashSet<>();
     _jspx_imports_classes.add("java.util.List");
-    _jspx_imports_classes.add("com.ayesh.webapp.entity.Employee");
+    _jspx_imports_classes.add("com.ayesh.webapp.entity.EmployeeService");
     _jspx_imports_classes.add("com.ayesh.webapp.entity.Department");
     _jspx_imports_classes.add("org.hibernate.SessionFactory");
     _jspx_imports_classes.add("com.ayesh.webapp.util.HibernateUtil");
@@ -157,7 +157,7 @@ public final class register_002demployee_jsp extends org.apache.jasper.runtime.H
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("\r\n");
-      out.write("<h1>Register Employee</h1>\r\n");
+      out.write("<h1>Register EmployeeService</h1>\r\n");
       out.write("<br>\r\n");
       out.write("\r\n");
 

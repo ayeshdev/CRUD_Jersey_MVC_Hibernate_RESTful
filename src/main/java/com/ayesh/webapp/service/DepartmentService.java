@@ -12,6 +12,5 @@ public class DepartmentService {
         Session session = sessionFactory.openSession();
 
         return session.createQuery("select d from Department d where d.id=:dId", Department.class).setParameter("dId",id).getSingleResult();
-
     }
 }
